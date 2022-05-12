@@ -89,6 +89,19 @@ public class OpenApiClientGeneratorWrapper {
     }
 
     /**
+     * Adds additional properties to the generator.
+     *
+     * @param additionalProperties a map with additional properties to add to the configurator.
+     * @return this wrapper
+     */
+    public OpenApiClientGeneratorWrapper withAdditionalProperties(final Map<String, String> additionalProperties) {
+        if (additionalProperties != null) {
+            additionalProperties.forEach(configurator::addAdditionalProperty);
+        }
+        return this;
+    }
+
+    /**
      * Sets the global 'skipFormModel' setting. If not set this setting will default to true.
      *
      * @param skipFormModel whether to skip the generation of models for form parameters

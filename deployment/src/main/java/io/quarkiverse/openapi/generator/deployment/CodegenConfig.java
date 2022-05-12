@@ -17,6 +17,7 @@ public class CodegenConfig {
     public static final String API_PKG_SUFFIX = ".api";
     public static final String MODEL_PKG_SUFFIX = ".model";
     public static final String VERBOSE_PROPERTY_NAME = "quarkus." + CODEGEN_TIME_CONFIG_PREFIX + ".verbose";
+    public static final String ADDITIONAL_PROPERTY_NAME = "quarkus." + CODEGEN_TIME_CONFIG_PREFIX + ".additional-properties.";
     // package visibility for unit tests
     static final String BUILD_TIME_SPEC_PREFIX_FORMAT = "quarkus." + CODEGEN_TIME_CONFIG_PREFIX + ".spec.%s";
     private static final String BASE_PACKAGE_PROP_FORMAT = "%s.base-package";

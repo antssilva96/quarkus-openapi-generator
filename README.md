@@ -103,6 +103,25 @@ public class PetResource {
 
 See the [integration-tests](integration-tests) module for more information of how to use this extension. Please be advised that the extension is on experimental, early development stage.
 
+## Additional Properties
+Passing additional properties to the generator template is also supported via the `quarkus.openapi-generator.codegen.additional-properties` configuration prefix.
+
+You may pass any properties you want to provide the generator in the following format
+
+```properties
+quarkus.openapi-generator.codegen.additional-properties.<your-additional-property>=<value>
+```
+
+for example
+
+```properties
+quarkus.openapi-generator.codegen.additional-properties.openApiNullable=false
+```
+
+Additional properties can also be used to provide Generator Config options.
+
+See [Configuration Options](https://openapi-generator.tech/docs/configuration/) to learn more about configuring the open api generator.
+
 ## Logging
 
 Since the most part of this extension work is in the `generate-code` execution phase of the Quarkus Maven's plugin, the log configuration must be set in the Maven context. When building your project, add `-Dorg.slf4j.simpleLogger.log.org.openapitools=off` to the `mvn` command to reduce the internal generator noise. For example:
